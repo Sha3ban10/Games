@@ -21,7 +21,9 @@ async function getGames(category) {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': 'ccf63a48b1msh34d586ee3eb0ac1p120e15jsn3682dbeb55c3',
-            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com',
+            Accept: "application/json",
+            "Content-Type": "application/json",
         }
     }
     const res = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`, options);
@@ -43,9 +45,3 @@ function ShowDeatails() {
     }
     )
 }
-
-
-
-
-
-
