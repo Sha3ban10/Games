@@ -1,8 +1,8 @@
-export class UI {
-        displayGames(api) {
-            var box = ``;
-            for (let i = 0; i < api.length; i++) {
-                box += `
+export default class Ui {
+    displayGames(api) {
+        var box = ``;
+        for (let i = 0; i < api.length; i++) {
+            box += `
         <div class="col-md-3 ">
                         <div id="${api[i].id}" class="card h-100 bg-transparent text-white">
                             <img src="${api[i].thumbnail}" class="card-img-top p-2 rounded-4" alt="...">
@@ -20,11 +20,11 @@ export class UI {
                           </div>
                     </div>
         `
-            }
-            $('.GameData').html(`${box}`);
         }
-        displayGamesDetails(result) {
-            let box =`
+        $('.GameData').html(`${box}`);
+    }
+    displayGamesDetails(result) {
+        let box = `
             <div class="container p-4">
             <div class="d-flex justify-content-between fs-4 ">
                 <p>Details Game</p>
@@ -45,7 +45,7 @@ export class UI {
             </div>
         </div>
             `
-            $('.GameDetails').html(box)
+        $('.GameDetails').html(box)
     }
 };
 

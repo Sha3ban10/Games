@@ -1,9 +1,9 @@
-import { UI } from "./UI.JS";
+import UI from "./uiModule";
+
 
 export class GameDetails {
     constructor(id) {
         getGameDetail(id);
-        
     }
 }
 
@@ -14,7 +14,7 @@ async function getGameDetail(id) {
         headers: {
             'X-RapidAPI-Key': 'ccf63a48b1msh34d586ee3eb0ac1p120e15jsn3682dbeb55c3',
             'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-            
+
         }
     }
     const response = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`, options);

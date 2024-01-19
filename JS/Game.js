@@ -1,5 +1,6 @@
 import { GameDetails } from "./GameDetails.js";
-import { UI } from "./UI.JS";
+import UI from "./uiModule.js";
+
 
 export class Games {
     constructor() {
