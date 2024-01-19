@@ -1,4 +1,4 @@
-import UI from "./uiModule";
+import UI from "./uiModule.js";
 
 
 export class GameDetails {
